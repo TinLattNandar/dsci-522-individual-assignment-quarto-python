@@ -10,6 +10,7 @@ RUN sudo apt update \
 
 USER $NB_UID
 
+
 # install packages from conda-linux-64.lock
 RUN mamba update --quiet --file /tmp/conda-linux-64.lock \
     && mamba clean --all -y -f \
